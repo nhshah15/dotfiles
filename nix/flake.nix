@@ -29,14 +29,19 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = with pkgs; [
-            ghostty-bin
-            zed-editor
-            nixfmt
-            obsidian
-            uv
             code-cursor
-            slack
+            ghostty-bin
             mise
+            nixfmt
+            notion-app
+            orbstack
+            oxfmt
+            oxlint
+            rustup
+            slack
+            uv
+            zed-editor
+            zoom-us
           ];
 
           # Enable Homebrew.
@@ -48,6 +53,10 @@
             WhatsApp = 310633997;
             Todoist = 585829637;
           };
+
+          homebrew.casks = [
+            "helium-browser"
+          ];
 
           # Add fonts.
           fonts.packages = with pkgs; [
