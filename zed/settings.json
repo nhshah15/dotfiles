@@ -1,6 +1,6 @@
 {
   "terminal": {
-    "font_family": "Google Sans Code",
+    "font_family": "Google Sans Code"
   },
   "vim_mode": true,
   "ui_font_size": 16,
@@ -8,6 +8,6 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Mocha - No Italics",
-  },
+    "dark": "Catppuccin Mocha - No Italics"
+  }
 }
