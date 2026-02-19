@@ -56,6 +56,7 @@
 
           homebrew.casks = [
             "helium-browser"
+            "mactex"
           ];
 
           # Add fonts.
