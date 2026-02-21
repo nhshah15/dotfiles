@@ -39,6 +39,7 @@
             oxlint
             rustup
             slack
+            tex-fmt
             uv
             zed-editor
             zoom-us
