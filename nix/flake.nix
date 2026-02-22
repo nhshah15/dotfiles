@@ -37,9 +37,11 @@
             orbstack
             oxfmt
             oxlint
+            ruff
             rustup
             slack
             tex-fmt
+            ty
             uv
             zed-editor
             zoom-us
