@@ -1,4 +1,12 @@
 {
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "base_keymap": "Cursor",
   "terminal": {
     "font_family": "Google Sans Code"
   },
