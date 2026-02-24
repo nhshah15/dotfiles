@@ -31,14 +31,13 @@
           environment.systemPackages = with pkgs; [
             code-cursor
             ghostty-bin
-            mise
+            go_latest
             nixfmt
             notion-app
             orbstack
             oxfmt
             oxlint
             ruff
-            rustup
             slack
             tex-fmt
             ty
