@@ -1,4 +1,12 @@
 {
+  "languages": {
+    "LaTeX": {
+      "show_edit_predictions": false
+    }
+  },
+  "edit_predictions": {
+    "provider": "copilot"
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false

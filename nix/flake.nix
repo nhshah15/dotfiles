@@ -38,6 +38,7 @@
             oxfmt
             oxlint
             ruff
+            rustup
             slack
             tex-fmt
             ty
