@@ -1,22 +1,43 @@
 {
+  "agent_servers": {
+    "cursor": {
+      "type": "registry",
+    },
+    "codex": {
+      "favorite_config_option_values": {
+        "reasoning_effort": ["xhigh"],
+      },
+    },
+  },
   "languages": {
+    "Python": {
+      "language_servers": ["ty", "ruff", "!basedpyright"],
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+      },
+      "formatter": {
+        "language_server": {
+          "name": "ruff",
+        },
+      },
+    },
     "LaTeX": {
-      "show_edit_predictions": false
-    }
+      "show_edit_predictions": false,
+    },
   },
   "edit_predictions": {
-    "provider": "copilot"
+    "provider": "copilot",
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "session": {
-    "trust_all_worktrees": true
+    "trust_all_worktrees": true,
   },
   "base_keymap": "Cursor",
   "terminal": {
-    "font_family": "Google Sans Code"
+    "font_family": "Google Sans Code",
   },
   "vim_mode": true,
   "ui_font_size": 16,
@@ -24,6 +45,6 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Mocha - No Italics"
-  }
+    "dark": "Catppuccin Mocha - No Italics",
+  },
 }
