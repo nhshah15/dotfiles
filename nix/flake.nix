@@ -59,6 +59,7 @@
 
           homebrew.casks = [
             "helium-browser"
+            "granola"
             "mactex"
           ];
 
@@ -137,6 +138,49 @@
               "X"
               "Y"
               "Z"
+            ];
+
+            on-window-detected = [
+              {
+                "if".app-name-regex-substring = "Zed";
+                run = "move-node-to-workspace Z";
+              }
+              {
+                "if".app-name-regex-substring = "Ghostty";
+                run = "move-node-to-workspace G";
+              }
+              {
+                "if".app-name-regex-substring = "Calendar";
+                run = "move-node-to-workspace A";
+              }
+              {
+                "if".app-name-regex-substring = "Slack";
+                run = "move-node-to-workspace S";
+              }
+              {
+                "if".app-name-regex-substring = "Todoist";
+                run = "move-node-to-workspace T";
+              }
+              {
+                "if".app-name-regex-substring = "Music";
+                run = "move-node-to-workspace M";
+              }
+              {
+                "if".app-name-regex-substring = "Messages";
+                run = "move-node-to-workspace M";
+              }
+              {
+                "if".app-name-regex-substring = "WhatsApp";
+                run = "move-node-to-workspace W";
+              }
+              {
+                "if".app-name-regex-substring = "Helium";
+                run = "move-node-to-workspace 1";
+              }
+              {
+                "if".app-name-regex-substring = "Notion";
+                run = "move-node-to-workspace N";
+              }
             ];
 
             on-mode-changed = [ ];
@@ -295,8 +339,21 @@
     {
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#Neils-MacBook-Pro
+      # or nix-rebuild (due to shell alias below)
       darwinConfigurations."neils-mbpro" = nix-darwin.lib.darwinSystem {
-        modules = [ configuration ];
+        modules = [
+          configuration
+          (
+            { ... }:
+            {
+              environment.shellAliases = {
+                nix-rebuild = "sudo darwin-rebuild switch --flake .#neils-mbpro";
+                nix-update = "nix flake update";
+                nix-clean = "sudo nix-collect-garbage -d";
+              };
+            }
+          )
+        ];
       };
 
       neils-mbpro = self.darwinConfigurations.neils-mbpro.config.system.build.toplevel;
