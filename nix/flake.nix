@@ -69,6 +69,7 @@
             "helium-browser"
             "granola"
             "mactex"
+            "notion-calendar"
           ];
 
           # Add fonts.
@@ -158,7 +159,7 @@
                 run = "move-node-to-workspace G";
               }
               {
-                "if".app-name-regex-substring = "Calendar";
+                "if".app-name-regex-substring = "Notion Calendar";
                 run = "move-node-to-workspace A";
               }
               {
