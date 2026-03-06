@@ -67,7 +67,6 @@
 
           homebrew.casks = [
             "helium-browser"
-            "granola"
             "mactex"
             "notion-calendar"
           ];
@@ -160,7 +159,7 @@
               }
               {
                 "if".app-name-regex-substring = "Notion Calendar";
-                run = "move-node-to-workspace A";
+                run = "move-node-to-workspace C";
               }
               {
                 "if".app-name-regex-substring = "Slack";
