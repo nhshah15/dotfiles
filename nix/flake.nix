@@ -40,12 +40,20 @@
             ruff
             rustup
             slack
+            starship
             tex-fmt
             ty
             uv
             zed-editor
             zoom-us
           ];
+
+          programs.zsh = {
+            enable = true;
+            promptInit = ''
+              eval "$(${pkgs.starship}/bin/starship init zsh)"
+            '';
+          };
 
           # Enable Homebrew.
           homebrew.enable = true;
