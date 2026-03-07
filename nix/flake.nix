@@ -162,6 +162,10 @@
               }
               {
                 "if".app-name-regex-substring = "Notion Calendar";
+                run = "move-node-to-workspace N";
+              }
+              {
+                "if".app-name-regex-substring = "Claude";
                 run = "move-node-to-workspace C";
               }
               {
