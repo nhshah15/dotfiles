@@ -40,6 +40,7 @@
             ruff
             rustup
             slack
+            spotify
             starship
             tex-fmt
             ty
@@ -66,6 +67,7 @@
           };
 
           homebrew.casks = [
+            "granola"
             "helium-browser"
             "mactex"
             "notion-calendar"
@@ -163,6 +165,10 @@
               }
               {
                 "if".app-name-regex-substring = "Slack";
+                run = "move-node-to-workspace S";
+              }
+              {
+                "if".app-name-regex-substring = "Spotify";
                 run = "move-node-to-workspace S";
               }
               {
