@@ -67,6 +67,7 @@
           };
 
           homebrew.casks = [
+            "claude"
             "granola"
             "helium-browser"
             "mactex"
